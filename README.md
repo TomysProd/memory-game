@@ -1,4 +1,4 @@
-# 🧠 Memory
+# 🧠 Memory Projet Scolaire
 
 **Memory** est une application web interactive de type *memory / clicker*, développée avec **React** et **Vite**.  
 Elle offre une base moderne, rapide et maintenable pour créer des jeux ou des expériences interactives.
