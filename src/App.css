@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'Xylarion';
+  src: url('/src/assets/font/XylarionBold.ttf');
+}
+/* Body */
+body {
+  background-image: url('/src/assets/images/background.gif');
+  background-color: #282c34;
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+/* Memory Game Container */
+.memory-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15%;
+}
+
+/* Memory Game */
+.memory-game {
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  grid-gap: 10px;
+}
+
+/* Card */
+.card {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+body, .card {
+  cursor: url('/src/assets/images/mouse.png'), auto;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.2s;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(360deg);
+  /*backface-visibility: visible;*/
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front img {
+  width: 100%;  /* L'image prendra toute la largeur de la carte */
+  height: 100%; /* L'image prendra toute la hauteur de la carte */
+  object-fit: cover; /* L'image s'ajustera pour couvrir la carte */
+}
+
+.card-back img {
+  width: 100%; /* La largeur du GIF sera égale à celle de la carte */
+  height: 100%; /* La hauteur du GIF sera égale à celle de la carte */
+  object-fit: cover; /* Le GIF s'ajustera pour couvrir toute la carte */
+}
+
+/* Buttons */
+button {
+  margin-top: 25px;
+}
+
+/* Basic Styling */
+.game-title{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  text-align: center;
+  align-items: center;
+  font: normal bold  / 1 '';
+  background-color: black;
+  padding-top: 15px;
+}
+.game-title{
+  background-image: url(/src/assets/images/galaxy.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Xylarion;
+  font-size: 80px;
+  animation: animatedText 10s infinite alternate-reverse;
+}
+
+@keyframes animatedText{
+  from{
+    background-position: 18%;
+  }
+  to{
+    background-position: 85%;
+  }}
+
+.win{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  text-align: center;
+  align-items: center;
+  font: normal bold  / 1 '';
+  background-color: black;
+  padding-top: 15px;
+}
+
+.win{
+  background-image: url(/src/assets/images/galaxy.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Xylarion;
+  font-size: 80px;
+  animation: animatedText 10s infinite alternate-reverse;
+}
+
+@keyframes animatedText{
+  from{
+    background-position: 18%;
+  }
+  to{
+    background-position: 85%;
+  }}
